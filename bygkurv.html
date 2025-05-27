@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liwira - byg din kurv</title>
+
+    <!--Amiri-->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">   
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+
+<!--------------------------------Ilyas nav start---------------------------------->
+<body id="ilyasbody">
+
+  <nav id="ilyasnavbar">
+    <a href="index.html"><img id="ilyaslogo" src="billeder/ilyasbilleder/logo.webp" alt="Liwira logo"></a>
+
+    <ul id="ilyasnavlinks">
+    <li><a href="index.html">Hjem</a></li>
+
+      <li class="ilyasdropdown">
+        <a href="#">Kategorier</a>
+        <ul class="ilyassubmenu">
+          <li><img class="ilyasicon" id="bryllupImg" src="billeder/ilyasbilleder/bryllup1.webp"><span>Bryllup</span></li>
+          <li><img class="ilyasicon" id="gaverImg" src="billeder/ilyasbilleder/gaver1.webp"><span>Gaver</span></li>
+          <li><img class="ilyasicon" id="maerkedageImg" src="billeder/ilyasbilleder/maerkedage1.webp"><span>Mærkedage</span></li>
+          <li><img class="ilyasicon" id="begravelseImg" src="billeder/ilyasbilleder/begravelse1.webp"><span>Begravelse</span></li>
+        </ul>
+      </li>
+
+      <li class="ilyasdropdown">
+        <a href="#">Om os</a>
+        <ul class="ilyassubmenu">
+          <li>Liwira</li>
+          <li>Lisbeth</li>
+        </ul>
+      </li>
+
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+
+    <div id="ilyasicons">
+      <div id="ilyassogContainer">
+        <img id="ilyassog" src="billeder/ilyasbilleder/search.webp" alt="Søg">
+        <input type="text" id="ilyassogfelt" placeholder="Søg her...">
+      </div>
+      <img id="ilyaskurv" src="billeder/ilyasbilleder/cart.webp" alt="Kurv">
+<a href="bygkurv.html"><button id="ilyasknap" class="ilyasactive">Byg din kurv</button></a>
+    </div>
+  </nav>
+  <div style="margin-top: 1000px;" class="bamsebjørn">
+    <h2>Bamse bjørn</h2>
+    <p>Her er din bamse bjørn tekst eller indhold.</p>
+  </div>
+
+      <script defer src="ilyasjavascript.js"></script>
+
+</body>
+<!---------------------Ilyas nav slut------------------------>
+
+
+
+
+    <main>
+        <!----------forside---------->
+        <section class="forside-section">
+          <div class="content-grid">
+            <div class="grid-3-11">
+              
+              <div class="forside-content"> <!--forside indhold-->
+                <div class="forside-left"> <!--venstre side på forsiden-->
+                  <h1>BYG DIN EGEN KURV</h1>
+          
+                    <div class="steps-list"> <!--liste med cirkler og tal i fra 1-5 (trin)-->
+                      <div class="step">
+                        <div class="step-circle">1</div> <!--stor cirkel med tal i -->
+                        <p>Vælg kurv</p> <!--beskrivelse af trin-->
+                      </div>
+
+                      <div class="step">
+                        <div class="step-circle">2</div>
+                        <p>Tilføj indhold</p>
+                      </div>
+
+                      <div class="step">
+                        <div class="step-circle">3</div>
+                        <p>Personliggør den</p>
+                      </div>
+
+                      <div class="step">
+                        <div class="step-circle">4</div>
+                        <p>Tjek, at du har alt</p>
+                      </div>
+
+                      <div class="step">
+                        <div class="step-circle">5</div>
+                        <p>Tilføj til kurv</p>
+                      </div>
+                    </div>
+                </div>
+          
+                <!--højre side på forsiden-->
+                <div class="forside-right">
+                  <div class="photo-grid"> <!--collage med forskellige billeder-->
+                    <img src="billeder/bygdinkurvforside/gavekurv.jpg" alt="Billede 1" class="photo photo-1">
+                    <img src="billeder/bygdinkurvforside/chokolade.jpg" alt="Billede 2" class="photo photo-2">
+                    <img src="billeder/bygdinkurvforside/butikken.jpg" alt="Billede 3" class="photo photo-3">
+                    <img src="billeder/bygdinkurvforside/kort.jpg" alt="Billede 4" class="photo photo-4">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!--første trin-->
+        <section class="step-one-section">
+          <div class="content-grid">
+            <div class="grid-3-11">
+          
+              <div class="catchy-header"> <!--stor tekst inden start af opbygning af kurv-->
+                <img src="billeder/grafik/sticker1.png" alt="Klistermærke" class="sticker"> <!--klistermærke ved den store tekst-->
+                <h2>GOD FORNØJELSE</h2> <!--den store tekst-->
+                <img src="billeder/grafik/sticker2.png" alt="Klistermærke" class="sticker">
+              </div>
+          
+              <!--større cirkel med trin ved siden af-->
+              <div class="step-large">
+                <div class="step-circle">1</div>
+                <p class="step-text-large">Vælg kurv</p>
+              </div>
+              
+              <!--4 kort med billeder og tekst-->
+              <div class="step-cards subcategory" data-category="kurv">
+                <div class="step-card" data-item-id="item1"> <!--item til at bruge i javascript-->
+                  <img src="billeder/kurv-kategori/kurv/kurv1.jpg" alt="Kurv 1">
+                  <p>Klassisk stil</p>
+                </div>
+
+                <div class="step-card" data-item-id="item2">
+                  <img src="billeder/kurv-kategori/kurv/kurv2.jpg" alt="Kurv 2">
+                  <p>Sort papkurv</p>
+                </div>
+
+                <div class="step-card" data-item-id="item3">
+                  <img src="billeder/kurv-kategori/kurv/kurv3.jpg" alt="Kurv 3">
+                  <p>Sort stofkurv</p>
+                </div>
+
+                <div class="step-card" data-item-id="item4">
+                  <img src="billeder/kurv-kategori/kurv/kurv4.jpg" alt="Kurv 4">
+                  <p>Rustik fletkurv</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--anden trin-->
+        <section class="two-section">
+          <div class="content-grid">
+            <div class="grid-3-11">
+          
+              <div class="trin-header">
+                <div class="step-circle">2</div>
+                <div class="trin-heading-texts">
+                  <p class="step-text-large">Tilføj ønsket indhold</p>
+                </div>
+              </div>
+              
+              <!--første kategori under andet trin-->
+              <div class="subcategory" data-category="varm">
+                <p class="subcategory-title">Drikkelse - varme drikke</p>
+
+                <div class="step-cards">
+                  <div class="step-card" data-item-id="item5">
+                    <img src="billeder/kurv-kategori/drikkelse/varmedrikke1.jpg" alt="Kurv 1">
+                    <p>Kvæde the med æble</p>
+                  </div>
+
+                  <div class="step-card" data-item-id="item6">
+                    <img src="billeder/kurv-kategori/drikkelse/varmedrikke2.jpg" alt="Kurv 2">
+                    <p>Hot cacao - truffle mix</p>
+                  </div>
+
+                  <div class="step-card" data-item-id="item7">
+                    <img src="billeder/kurv-kategori/drikkelse/varmedrikke3.jpg" alt="Kurv 3">
+                    <p>Chai - black tea</p>
+                  </div>
+                  
+                  <div class="step-card" data-item-id="item8">
+                    <img src="billeder/kurv-kategori/drikkelse/varmedrikke4.jpg" alt="Kurv 4">
+                    <p>Langeskov kaffen</p>
+                  </div>
+                </div>
+
+                <!--se mere pil-->
+                <div class="toggle-more" onclick="toggleCircles(this)">
+                  <img src="billeder/Ikoner/arrow-down-stroke.png" alt="Pil ned" class="arrow">
+                  <p class="toggle-text">SE MERE</p>
+                </div>
+              </div>
+
+              <!--anden kategori under andet trin-->
+              <div class="subcategory" data-category="juice">
+                <p class="subcategory-title">Drikkelse - juice</p>
+
+                <div class="step-cards">
+                  <div class="step-card" data-item-id="item9">
+                    <img src="billeder/kurv-kategori/drikkelse/juice1.jpg" alt="Kurv 1">
+                    <p>Æblemost granatæble</p>
+                  </div>
+
+                  <div class="step-card" data-item-id="item10">
+                    <img src="billeder/kurv-kategori/drikkelse/juice2.jpg" alt="Kurv 2">
+                    <p>Æblemost med rabarber</p>
+                  </div>
+                      
+                  <div class="step-card" data-item-id="item11">
+                    <img src="billeder/kurv-kategori/drikkelse/juice3.jpg" alt="Kurv 3">
+                    <p>Æblemost</p>
+                  </div>
+                  
+                  <div class="step-card" data-item-id="item12"> 
+                    <img src="billeder/kurv-kategori/drikkelse/juice4.jpg" alt="Kurv 4">
+                    <p>Æblemost med jordbær</p>
+                  </div>
+                </div>
+                    
+                <div class="toggle-more" onclick="toggleCircles(this)">
+                  <img src="billeder/Ikoner/arrow-down-stroke.png" alt="Pil ned" class="arrow">
+                  <p class="toggle-text">SE MERE</p>
+                </div>
+              </div>
+
+              <!--tredje kategori under andet trin-->
+              <div class="subcategory" data-category="vin">
+                <p class="subcategory-title">Drikkelse - vin</p>
+                
+                <div class="step-cards">
+                  <div class="step-card" data-item-id="item13">
+                    <img src="billeder/kurv-kategori/drikkelse/vin1.jpg" alt="Kurv 1">
+                    <p>Domaine Philippe</p>
+                  </div>
+
+                  <div class="step-card" data-item-id="item14">
+                    <img src="billeder/kurv-kategori/drikkelse/vin2.jpg" alt="Kurv 2">
+                    <p>Auturny Doririe</p>
+                  </div>
+                      
+                  <div class="step-card" data-item-id="item15">
+                    <img src="billeder/kurv-kategori/drikkelse/vin3.jpg" alt="Kurv 3">
+                    <p>Alsace Riesling</p>
+                  </div>
+                      
+                  <div class="step-card" data-item-id="item16">
+                    <img src="billeder/kurv-kategori/drikkelse/vin4.jpg" alt="Kurv 4">
+                    <p>H. Lubes Thörnicher</p>
+                  </div>
+                </div>
+                
+                <div class="toggle-more" onclick="toggleCircles(this)">
+                  <img src="billeder/Ikoner/arrow-down-stroke.png" alt="Pil ned" class="arrow">
+                  <p class="toggle-text">SE MERE</p>
+                </div>
+              </div>
+
+              <!--fjerde kategori under andet trin-->
+              <div class="subcategory" data-category="alkohol">
+                <p class="subcategory-title">Drikkelse - øl</p>
+
+                <div class="step-cards">
+                  <div class="step-card" data-item-id="item17">
+                    <img src="billeder/kurv-kategori/drikkelse/øl1.jpg" alt="Kurv 1">
+                    <p>Kongshøj klassikeren</p>
+                  </div>
+
+                  <div class="step-card" data-item-id="item18">
+                    <img src="billeder/kurv-kategori/drikkelse/øl2.jpg" alt="Kurv 2">
+                    <p>Kratluskeren</p>
+                  </div>
+
+                  <div class="step-card" data-item-id="item19">
+                    <img src="billeder/kurv-kategori/drikkelse/øl3.jpg" alt="Kurv 3">
+                    <p>Blondinen</p>
+                  </div>
+
+                  <div class="step-card" data-item-id="item20">
+                    <img src="billeder/kurv-kategori/drikkelse/øl4.jpg" alt="Kurv 4">
+                    <p>Alkymisten</p>
+                  </div>
+                </div>
+                
+                <div class="toggle-more" onclick="toggleCircles(this)">
+                  <img src="billeder/Ikoner/arrow-down-stroke.png" alt="Pil ned" class="arrow">
+                  <p class="toggle-text">SE MERE</p>
+                </div>
+              </div>
+              <img src="billeder/grafik/grafik.png" alt="Adskillelse" class="trend-divider">
+            </div>
+          </div>
+        </section>
+
+        <!--flere kategorier-->
+        <section class="kategori-sektion">
+          <div class="content-grid">
+            <div class="grid-3-11">
+                
+              <!--femte kategori under andet trin-->
+              <div class="subcategory" data-category="karamel">
+                <p class="subcategory-title">Delikatesse - karameller</p>
+
+                <div class="step-cards">
+                  <div class="step-card" data-item-id="item21">
+                    <img src="billeder/kurv-kategori/delikatesse/karameller1.jpg" alt="Snack 1">
+                    <p>Salty danish caramels</p>
+                  </div>
+                    
+                  <div class="step-card" data-item-id="item22">
+                    <img src="billeder/kurv-kategori/delikatesse/karameller2.jpg" alt="Snack 2">
+                    <p>Bornholmske karameller</p>
+                  </div>
+                    
+                  <div class="step-card" data-item-id="item23">
+                    <img src="billeder/kurv-kategori/delikatesse/karameller3.jpg" alt="Snack 3">
+                    <p>Håndlavede karameller</p>
+                  </div>
+                    
+                  <div class="step-card" data-item-id="item24">
+                    <img src="billeder/kurv-kategori/delikatesse/karameller4.jpg" alt="Snack 4">
+                    <p>Klasik karamel & seasalt</p>
+                  </div>
+                </div>
+                
+                <div class="toggle-more" onclick="toggleCircles(this)">
+                  <img src="billeder/Ikoner/arrow-down-stroke.png" alt="Pil ned" class="arrow">
+                  <p class="toggle-text">SE MERE</p>
+                </div>
+              </div>
+          
+              <!--sjette kategori under andet trin-->
+              <div class="subcategory" data-category="snack">
+                <p class="subcategory-title">Delikatesse - sprøde snacks</p>
+
+                <div class="step-cards">
+                  <div class="step-card" data-item-id="item25">
+                    <img src="billeder/kurv-kategori/delikatesse/sprødsnack1.jpg" alt="Slik 1">
+                    <p>Saltede cashewnødder</p>
+                  </div>
+
+                  <div class="step-card" data-item-id="item26">
+                    <img src="billeder/kurv-kategori/delikatesse/sprødsnack2.jpg" alt="Slik 2">
+                    <p>Gourmet potatochips</p>
+                  </div>
+
+                  <div class="step-card" data-item-id="item27">
+                    <img src="billeder/kurv-kategori/delikatesse/sprødsnack3.jpg" alt="Slik 3">
+                    <p>Artisah vegan crackers</p>
+                  </div>
+                    
+                  <div class="step-card" data-item-id="item28">
+                    <img src="billeder/kurv-kategori/delikatesse/sprødsnack4.jpg" alt="Slik 4">
+                    <p>Saltede mandler</p>
+                  </div>
+                </div>
+                
+                <div class="toggle-more" onclick="toggleCircles(this)">
+                  <img src="billeder/Ikoner/arrow-down-stroke.png" alt="Pil ned" class="arrow">
+                  <p class="toggle-text">SE MERE</p>
+                </div>
+              </div>
+          
+              <!--syvende kategori under andet trin-->
+              <div class="subcategory" data-category="marmelade">
+                <p class="subcategory-title">Delikatesse - marmelade</p>
+                
+                <div class="step-cards">
+                  <div class="step-card" data-item-id="item29">
+                    <img src="billeder/kurv-kategori/delikatesse/marmelade1.jpg" alt="Vin 1">
+                    <p>Æble gele</p>
+                  </div>
+
+                  <div class="step-card" data-item-id="item30">
+                    <img src="billeder/kurv-kategori/delikatesse/marmelade2.jpg" alt="Vin 2">
+                    <p>marmelade med vanilje</p>
+                  </div>
+
+                  <div class="step-card" data-item-id="item31">
+                    <img src="billeder/kurv-kategori/delikatesse/marmelade3.jpg" alt="Vin 3">
+                    <p>Kirsebær m. lakrids</p>
+                  </div>
+
+                  <div class="step-card" data-item-id="item32">
+                    <img src="billeder/kurv-kategori/delikatesse/marmelade4.jpg" alt="Vin 4">
+                    <p>Rabarber marmelade</p>
+                  </div>
+                </div>
+
+                <div class="toggle-more" onclick="toggleCircles(this)">
+                  <img src="billeder/Ikoner/arrow-down-stroke.png" alt="Pil ned" class="arrow">
+                  <p class="toggle-text">SE MERE</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!--mange flere kategorier-->
+        <section class="non-food-sektion">
+          <div class="content-grid">
+            <div class="grid-3-11">
+          
+              <!--ottende kategori under andet trin-->
+              <div class="subcategory" data-category="olie">
+                <p class="subcategory-title">Madlavning - olie</p>
+                
+                <div class="step-cards">
+                  <div class="step-card" data-item-id="item33">
+                    <img src="billeder/kurv-kategori/madlavning/olie1.jpg" alt="Kaffe 1">
+                    <p>Onion&basil krydderolie</p>
+                  </div>
+
+                  <div class="step-card" data-item-id="item34">
+                    <img src="billeder/kurv-kategori/madlavning/olie2.jpg" alt="Kaffe 2">
+                    <p>Tomato krydderolie</p>
+                  </div>
+
+                  <div class="step-card" data-item-id="item35">
+                    <img src="billeder/kurv-kategori/madlavning/olie3.jpg" alt="Kaffe 3">
+                    <p>Huile D'olive</p>
+                  </div>
+                    
+                  <div class="step-card" data-item-id="item36">
+                    <img src="billeder/kurv-kategori/madlavning/olie4.jpg" alt="Kaffe 4">
+                    <p>Quevedo olive oil</p>
+                  </div>
+                </div>
+                
+                <div class="toggle-more" onclick="toggleCircles(this)">
+                  <img src="billeder/Ikoner/arrow-down-stroke.png" alt="Pil ned" class="arrow">
+                  <p class="toggle-text">SE MERE</p>
+                </div>
+              </div>
+
+              <!--niende kategori under andet trin-->
+              <div class="subcategory" data-category="krydderier">
+                <p class="subcategory-title">Madlavning - krydderier</p>
+                  
+                <div class="step-cards">
+                  <div class="step-card" data-item-id="item37">
+                    <img src="billeder/kurv-kategori/madlavning/krydderi1.jpg" alt="Kaffe 1">
+                    <p>Bruschetta</p>
+                  </div>
+                      
+                  <div class="step-card" data-item-id="item38">
+                    <img src="billeder/kurv-kategori/madlavning/krydderi2.jpg" alt="Kaffe 2">
+                    <p>Salt & pepper</p>
+                  </div>
+                      
+                  <div class="step-card" data-item-id="item39">
+                    <img src="billeder/kurv-kategori/madlavning/krydderi3.jpg" alt="Kaffe 3">
+                    <p>Øl salt</p>
+                  </div>
+                      
+                  <div class="step-card" data-item-id="item40">
+                    <img src="billeder/kurv-kategori/madlavning/krydderi4.jpg" alt="Kaffe 4">
+                    <p>Mr. bacon</p>
+                  </div>
+                </div>
+                
+                <div class="toggle-more" onclick="toggleCircles(this)">
+                  <img src="billeder/Ikoner/arrow-down-stroke.png" alt="Pil ned" class="arrow">
+                  <p class="toggle-text">SE MERE</p>
+                </div>
+              </div>
+          
+              <!--tiende kategori under andet trin-->
+              <div class="subcategory" data-category="baby">
+                <p class="subcategory-title">Non-food - børn</p>
+                
+                <div class="step-cards">
+                  <div class="step-card" data-item-id="item41">
+                    <img src="billeder/kurv-kategori/nonfood/baby1.jpg" alt="Special 1">
+                    <p>Ramme</p>
+                  </div>
+                    
+                  <div class="step-card" data-item-id="item42">
+                    <img src="billeder/kurv-kategori/nonfood/baby2.jpg" alt="Special 2">
+                    <p>Bamse kanin</p>
+                  </div>
+                    
+                  <div class="step-card" data-item-id="item43">
+                    <img src="billeder/kurv-kategori/nonfood/baby3.jpg" alt="Special 3">
+                    <p>Telt bamse</p>
+                  </div>
+                    
+                  <div class="step-card" data-item-id="item44">
+                    <img src="billeder/kurv-kategori/nonfood/baby4.jpg" alt="Special 4">
+                    <p>Bamse bjørn</p>
+                  </div>
+                </div>
+                
+                <div class="toggle-more" onclick="toggleCircles(this)">
+                  <img src="billeder/Ikoner/arrow-down-stroke.png" alt="Pil ned" class="arrow">
+                  <p class="toggle-text">SE MERE</p>
+                </div>
+              </div>
+
+              <!--ellevte kategori under andet trin-->
+              <div class="subcategory" data-category="keramik">
+                <p class="subcategory-title">Non-food - keramik</p>
+                  
+                <div class="step-cards">
+                  <div class="step-card" data-item-id="item45">
+                    <img src="billeder/kurv-kategori/nonfood/keramik1.jpg" alt="Special 1">
+                    <p>Vase</p>
+                  </div>
+                      
+                  <div class="step-card" data-item-id="item46">
+                    <img src="billeder/kurv-kategori/nonfood/keramik2.jpg" alt="Special 2">
+                    <p>Stearinlys</p>
+                  </div>
+                      
+                  <div class="step-card" data-item-id="item47">
+                    <img src="billeder/kurv-kategori/nonfood/keramik3.jpg" alt="Special 3">
+                    <p>Lys holder</p>
+                  </div>
+                      
+                  <div class="step-card" data-item-id="item48">
+                    <img src="billeder/kurv-kategori/nonfood/keramik4.jpg" alt="Special 4">
+                    <p>Krus</p>
+                  </div>
+                </div>
+                    
+                <div class="toggle-more" onclick="toggleCircles(this)">
+                  <img src="billeder/Ikoner/arrow-down-stroke.png" alt="Pil ned" class="arrow">
+                  <p class="toggle-text">SE MERE</p>
+                </div>
+              </div>
+              
+              <!--tolvte kategori under andet trin-->
+              <div class="subcategory" data-category="bolig">
+                <p class="subcategory-title">Non-food - interiør</p>
+                
+                <div class="step-cards">
+                  <div class="step-card" data-item-id="item49">
+                    <img src="billeder/kurv-kategori/nonfood/bolig1.jpg" alt="Special 1">
+                    <p>Keramik hus</p>
+                  </div>
+                      
+                  <div class="step-card" data-item-id="item50">
+                    <img src="billeder/kurv-kategori/nonfood/bolig2.jpg" alt="Special 2">
+                    <p>Gaveartikler - dådyr</p>
+                  </div>
+                      
+                  <div class="step-card" data-item-id="item51">
+                    <img src="billeder/kurv-kategori/nonfood/bolig3.jpg" alt="Special 3">
+                    <p>Flettekurv m. blomster</p>
+                  </div>
+                      
+                  <div class="step-card" data-item-id="item52">
+                    <img src="billeder/kurv-kategori/nonfood/bolig4.jpg" alt="Special 4">
+                    <p>Termokande</p>
+                  </div>
+                </div>
+                
+                <div class="toggle-more" onclick="toggleCircles(this)">
+                  <img src="billeder/Ikoner/arrow-down-stroke.png" alt="Pil ned" class="arrow">
+                  <p class="toggle-text">SE MERE</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!----------personliggør---------->
+        <section class="personaliser-section">
+          <div class="content-grid">
+            <div class="grid-3-11">
+                
+              <div class="trin-header">
+                <div class="step-circle">3</div>
+                <div class="trin-heading-texts">   
+                  <p class="step-text-large">Personliggør den</p>
+                </div>
+              
+                </div>
+                  <p class="trin-description">Tilføj dit personlige præg med farver, kort og hilsen.</p>
+                  <div class="personaliser-grid">
+          
+                    <!--venstre side af siden-->
+                    <div class="personaliser-left">
+                      <div class="personaliser-section-block">
+                        <h4 class="personaliser-subtitle">Gavebånd</h4><!--overskrift på første indhold-->
+
+                        <!--cirklerne til farvevalg af gavebånd-->
+                        <div class="color-options">
+                          <div class="color-circle" style="background-color: #7CC383;"></div>
+                          <div class="color-circle" style="background-color: #78A3C6;"></div>
+                          <div class="color-circle" style="background-color: #9C2D2D;"></div>
+                          <div class="color-circle" style="background-color: #C370A2;"></div>
+                          <div class="color-circle" style="background-color: #E9C558;"></div>
+                        </div>
+                      </div>
+          
+                      <div class="personaliser-section-block">
+                        <h4 class="personaliser-subtitle">Kortvalg</h4> <!--andet indhold-->
+                        
+                        <!--afkrydsningsliste-->
+                        <div class="checkbox-group">
+                          <label><input type="checkbox"> Fødselsdag</label>
+                          <label><input type="checkbox"> Bryllup</label>
+                          <label><input type="checkbox"> Konfirmation</label>
+                          <label><input type="checkbox"> Reception</label>
+                          <label><input type="checkbox"> Barsel</label>
+                          <label><input type="checkbox"> Ingen kort</label>
+                        </div>
+                      </div>
+                    </div>
+          
+                    <!--højre side af siden-->
+                    <div class="personaliser-right">
+                      <h4 class="personaliser-subtitle">Skriv dit kort her</h4>
+                      <p class="note-hint">OBS. maks 150 tegn</p>
+                      <textarea class="note-input" placeholder="Skriv din hilsen her"></textarea> <!--input note til at skrive hilsen-->
+                    </div>
+                  </div>
+                  <img src="billeder/grafik/grafik3.png" alt="Adskillelse" class="trend-divider">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!----------dobbelttjekke side---------->
+        <section class="checkout-section">
+          <div class="content-grid">
+            <div class="grid-3-11">
+          
+              <div class="trin-header">
+                <div class="step-circle">4</div>
+                <div class="trin-heading-texts">
+                  <p class="step-text-large">Tjek, at du har alt<p>
+                </div>
+              </div>
+          
+              <hr class="divider"/> <!--linjen imellem forskellige elementer-->
+          
+              <!--containeren hvor produkter og alt andet indhold er i-->
+              <div class="checkout-slider-container">
+                <img class="pil left-arrow" src="billeder/Ikoner/chevron-left.png" alt="Venstre pil"> 
+                  
+                <!--når der tilføjes varer: resten inde på javascript-->
+                <div class="checkout-items-wrapper">
+                  <div class="checkout-items" id="checkoutItems"></div>
+                </div>
+                  
+                <img class="pil right-arrow" src="billeder/Ikoner/chevron-right.png" alt="Højre pil">
+              </div>
+          
+              <hr class="divider"/>
+          
+              <!--efter den boks-->
+              <div class="checkout-summary">
+                <div id="discountMessage" style="margin-bottom: 8px; font-weight: bold; color: #007700;"></div> <!--rabat-->
+                <p>Samlet pris: <span id="totalPrice">0 DKK</span></p> <!--samlede pris-->
+                <button class="add-to-cart-btn">Tilføj til kurv</button> <!--knap til tilføjelse i kurven-->
+              </div>
+
+              <hr class="divider" />
+            </div>
+          </div>
+        </section>   
+    </main>
+
+    <!----------footer---------->
+    <footer class="footer">
+      <div class="footer-grid">
+
+        <!--venstre side af footeren-->
+        <div class="footer-left">
+          <h2>Find os</h2>
+          <ul class="contact-info">
+            <li><strong>Telefon:</strong> <span>+45 24 22 55 99</span></li>
+            <li><strong>Email:</strong> <span>kontakt@dinpejs.dk</span></li>
+            <li><strong>Adresse:</strong> <span>Jernbanegade 16, 5550 Langeskov</span></li>
+          </ul>
+          <img src="billeder/footer/maps.jpg" alt="Kort" class="map-image">
+          <p class="opening-hours"><strong>Butikkens åbningstider:</strong><br>Man - Fre 11-17 <br>Lør 10-12 <br>Søn Lukket</p>
+        </div>
+  
+        <!--midten af footeren-->
+        <div class="footer-center">
+          <img src="billeder/logo.jpg" alt="Logo" class="footer-logo">
+          <img src="billeder/footer/sociale.png" alt="Dekorativt billede" class="under-logo-img">
+        </div>
+  
+        <!--højre side af footeren-->
+        <div class="footer-right">
+          <h2>Nyttig info</h2>
+          <ul class="info-links">
+            <li><a href="#">Om Liwira</a></li>
+            <li><a href="#">Byg din kurv</a></li>
+            <li><a href="#">Mest stillede spørgsmål</a></li>
+            <li><a href="#">Kontakt os</a></li>
+            <li><a href="#">Handelsbetingelser</a></li>
+            <li><a href="#">Fortrydelsesret</a></li>
+            <li><a href="#">Datapolitik</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
