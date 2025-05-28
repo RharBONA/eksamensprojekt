@@ -13,59 +13,51 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="navigationsbar.js" defer></script>
   </head>
 
-<!--------------------------------Ilyas nav start---------------------------------->
-<body id="ilyasbody">
+  <body>
+    <!--navigationsbar-->
+    <header id="navbar">
+      <a href="index.html"><img id="logo" src="billeder/logo.jpg" alt="Liwira logo"></a>
+  
+      <ul id="navlinks">
+        <li><a href="index.html" class="navactive">Hjem</a></li>
+  
+        <li class="dropdown">
+          <a href="#">Kategorier</a>
+          <ul class="submenu">
+            <li><img class="navicon" id="bryllupImg" src="billeder/navbar/bryllup.jpg" alt="to ringe"><span>Bryllup</span></li>
+            <li><img class="navicon" id="gaverImg" src="billeder/navbar/gave.jpg" alt="en gave"><span>Gaver</span></li>
+            <li><img class="navicon" id="maerkedageImg" src="billeder/navbar/markedage.jpg" alt="balloner"><span>Mærkedage</span></li>
+            <li><img class="navicon" id="begravelseImg" src="billeder/navbar/begravelse.jpg" alt="kors"><span>Begravelse</span></li>
+          </ul>
+        </li>
+  
+        <li class="dropdown">
+          <a href="#">Om os</a>
+          <ul class="submenu">
+            <li>Liwira</li>
+            <li>Lisbeth</li>
+          </ul>
+        </li>
+  
+        <li><a href="#">Kontakt</a></li>
+      </ul>
+  
+      <div id="iconss">
+        <div id="searchcontainer">
+          <img id="search" src="billeder/Ikoner/search-alt.png" alt="Søg">
+          <input type="text" id="searchfelt" placeholder="Søg her...">
+        </div>
+        <img id="basket" src="billeder/Ikoner/basket.png" alt="Kurv">
+        <a href="bygkurv.html" id="buttonnav" class="navactive">Byg din kurv</a>
 
-  <nav id="ilyasnavbar">
-    <a href="index.html"><img id="ilyaslogo" src="billeder/ilyasbilleder/logo.webp" alt="Liwira logo"></a>
-
-    <ul id="ilyasnavlinks">
-    <li><a href="index.html">Hjem</a></li>
-
-      <li class="ilyasdropdown">
-        <a href="#">Kategorier</a>
-        <ul class="ilyassubmenu">
-          <li><img class="ilyasicon" id="bryllupImg" src="billeder/ilyasbilleder/bryllup1.webp"><span>Bryllup</span></li>
-          <li><img class="ilyasicon" id="gaverImg" src="billeder/ilyasbilleder/gaver1.webp"><span>Gaver</span></li>
-          <li><img class="ilyasicon" id="maerkedageImg" src="billeder/ilyasbilleder/maerkedage1.webp"><span>Mærkedage</span></li>
-          <li><img class="ilyasicon" id="begravelseImg" src="billeder/ilyasbilleder/begravelse1.webp"><span>Begravelse</span></li>
-        </ul>
-      </li>
-
-      <li class="ilyasdropdown">
-        <a href="#">Om os</a>
-        <ul class="ilyassubmenu">
-          <li>Liwira</li>
-          <li>Lisbeth</li>
-        </ul>
-      </li>
-
-      <li><a href="#">Kontakt</a></li>
-    </ul>
-
-    <div id="ilyasicons">
-      <div id="ilyassogContainer">
-        <img id="ilyassog" src="billeder/ilyasbilleder/search.webp" alt="Søg">
-        <input type="text" id="ilyassogfelt" placeholder="Søg her...">
       </div>
-      <img id="ilyaskurv" src="billeder/ilyasbilleder/cart.webp" alt="Kurv">
-<a href="bygkurv.html"><button id="ilyasknap" class="ilyasactive">Byg din kurv</button></a>
-    </div>
-  </nav>
-
-
-      <script defer src="ilyasjavascript.js"></script>
-
-</body>
-<!---------------------Ilyas nav slut------------------------>
-
-
-
+    </header>
 
     <main>
-        <!----------forside---------->
+        <!--forside-->
         <section class="forside-section">
           <div class="content-grid">
             <div class="grid-3-11">
@@ -167,7 +159,7 @@
               <div class="trin-header">
                 <div class="step-circle">2</div>
                 <div class="trin-heading-texts">
-                  <p class="step-text-large">Tilføj ønsket indhold</p>
+                  <h2 class="step-text-large">Tilføj ønsket indhold</h2>
                 </div>
               </div>
               
@@ -311,6 +303,7 @@
                 
               <!--femte kategori under andet trin-->
               <div class="subcategory" data-category="karamel">
+                <h2 class="subcategory-title"> . </h2>
                 <p class="subcategory-title">Delikatesse - karameller</p>
 
                 <div class="step-cards">
@@ -415,7 +408,7 @@
           
               <!--ottende kategori under andet trin-->
               <div class="subcategory" data-category="olie">
-                <p class="subcategory-title">Madlavning - olie</p>
+                <h2 class="subcategory-title">Madlavning - olie</h2>
                 
                 <div class="step-cards">
                   <div class="step-card" data-item-id="item33">
@@ -576,7 +569,7 @@
           </div>
         </section>
 
-        <!----------personliggør---------->
+        <!--personliggør-->
         <section class="personaliser-section">
           <div class="content-grid">
             <div class="grid-3-11">
@@ -588,7 +581,7 @@
                 </div>
               
                 </div>
-                  <p class="trin-description">Tilføj dit personlige præg med farver, kort og hilsen.</p>
+                  <p class="trin-description">Giv din gave lidt ekstra kærlighed – vælg farver, skriv en hilsen og sæt prikken over i’et.</p>
                   <div class="personaliser-grid">
           
                     <!--venstre side af siden-->
@@ -631,11 +624,9 @@
                   <img src="billeder/grafik/grafik3.png" alt="Adskillelse" class="trend-divider">
                 </div>
               </div>
-            </div>
-          </div>
         </section>
         
-        <!----------dobbelttjekke side---------->
+        <!--dobbelttjekke side-->
         <section class="checkout-section">
           <div class="content-grid">
             <div class="grid-3-11">
@@ -643,11 +634,11 @@
               <div class="trin-header">
                 <div class="step-circle">4</div>
                 <div class="trin-heading-texts">
-                  <p class="step-text-large">Tjek, at du har alt<p>
+                  <h2 class="step-text-large">Tjek, at du har alt</h2>
                 </div>
               </div>
           
-              <hr class="divider"/> <!--linjen imellem forskellige elementer-->
+              <hr class="divider"> <!--linjen imellem forskellige elementer-->
           
               <!--containeren hvor produkter og alt andet indhold er i-->
               <div class="checkout-slider-container">
@@ -661,22 +652,22 @@
                 <img class="pil right-arrow" src="billeder/Ikoner/chevron-right.png" alt="Højre pil">
               </div>
           
-              <hr class="divider"/>
+              <hr class="divider">
           
               <!--efter den boks-->
               <div class="checkout-summary">
                 <div id="discountMessage" style="margin-bottom: 8px; font-weight: bold; color: #007700;"></div> <!--rabat-->
                 <p>Samlet pris: <span id="totalPrice">0 DKK</span></p> <!--samlede pris-->
-                <button class="add-to-cart-btn">Tilføj til kurv</button> <!--knap til tilføjelse i kurven-->
+                <button class="trend-button">Tilføj til kurv</button>
               </div>
 
-              <hr class="divider" />
+              <hr class="divider">
             </div>
           </div>
         </section>   
     </main>
 
-    <!----------footer---------->
+    <!--footer-->
     <footer class="footer">
       <div class="footer-grid">
 

@@ -1,8 +1,6 @@
-body {
-  background-color: #F4ECE1;
-  padding: 2rem;
-  color: #542A18;
-  font-family: 'Poppins', serif;
+body, html {
+    height: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /*alle elementer*/
@@ -12,35 +10,1936 @@ body {
     box-sizing: border-box;
 }
 
-.navbar {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 20px 50px; 
-    position: fixed; 
+/*glidende overgang når skærm justeres*/
+body, header, main, footer, div, section {
+  transition: width 0.3s ease, padding 0.3s ease, margin 0.3s ease, font-size 0.3s ease;
+}
+
+/*---------- navigationsbaren ----------*/
+#navbar {
+  background-color: #CFA999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 20px; /* Øget padding for tykkelse */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 80px; /* Tilføj en fast højde hvis du vil sikre visuel ensartethed */
+}
+
+#logo {
+  height: 55px;
+  margin-top: 5px;
+}
+
+#navlinks {
+  list-style: none;
+  display: flex;
+  align-items: center; /* <- Dette centrerer lodret */
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#navlinks li {
+  position: relative;
+}
+
+#navlinks a {
+  text-decoration: none;
+  color: #762E2E;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+#navlinks a:hover {
+  color: #fff;
+}
+
+.navactive {
+  border-bottom: 2px solid #762E2E;
+  font-weight: bold;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #CFA999;
+  list-style: none;
+  padding: 0.5rem;
+  margin: 0;
+  z-index: 999;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submenu li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+}
+
+.submenu li:hover {
+  background-color: #eee;
+}
+
+.navicon {
+  width: 20px;
+  height: 20px;
+}
+
+#iconss {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#searchcontainer {
+  display: flex;
+  align-items: center;
+}
+
+#search, #basket {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+#search {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+#searchfelt {
+  display: none;
+  padding: 5px;
+  font-family: 'Amiri', serif;
+  border: 1px solid #762E2E;
+  margin-left: 8px;
+  font-size: 16px;
+}
+
+#searchfelt.show {
+  display: inline-block;
+}
+
+#basket {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+#buttonnav {
+  background-color: #762E2E;
+  color: #F4ECE1;
+  font-family: 'Amiri', serif;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 50px;
+  display: inline-block; 
+  font-weight: normal;
+  text-decoration: none;
+}
+
+#buttonnav:hover {
+  color: #762E2E;
+  background-color: #C2982E;
+}
+
+/* ---------- responsiv til mindre skærme ---------- */
+@media screen and (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    height: auto;
+  }
+
+  #logo {
+    height: 40px;
+    margin: 0;
+  }
+
+  #navlinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 10px;
     width: 100%;
+  }
+
+  #navlinks a {
+    font-size: 16px;
+  }
+
+  .submenu {
+    position: static;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .dropdown:hover .submenu {
+    display: none;
+  }
+
+  .dropdown .submenu {
+    display: none;
+  }
+
+  .dropdown.open .submenu {
+    display: block;
+  }
+
+  .submenu li {
+    padding: 0.5rem;
+    background-color: #f4ece1;
+    margin: 2px 0;
+    border-radius: 5px;
+  }
+
+  #iconss {
+    margin-top: 10px;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  #search, #basket {
+    width: 20px;
+    height: 20px;
+  }
+
+  #searchfelt {
+    width: 120px;
+    font-size: 14px;
+  }
+
+  #buttonnav {
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-top: 10px;
+  }
+}
+
+
+/*---------- grid ----------*/
+.content-grid {
+    display: grid; /*grid aktiveres*/
+    grid-template-columns: repeat(13, 1fr); /*13 grid anvendes, altså i kolonner*/
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+.grid-3-11 {
+    grid-column: 3 / 12; /*alt indhold skal være mellem 3 til 12*/
+}
+
+/*---------- forside ----------*/
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden; /*hvis billeder er større skjules overflow*/
+}
+  
+.hero-img {
+    position: absolute;
     top: 0;
-    background-color: #CFA999; 
-    z-index: 999; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*billedet passer ind uden at ændre i plan*/
+    z-index: 1; /*ligger nederst*/
+}
+  
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.287); /*hvid overlay med opacitet på 28,7%*/
+    display: flex; /*gør det muligt at justrere med f.eks. justify-content og align-items*/
+    align-items: center;
+    z-index: 2; /*ovenpå billedet*/
+    justify-content: center; 
+    text-align: center;
 }
 
-.logo {
+.hero-content {
+    z-index: 3;
+    text-align: center;
+}
+  
+.hero-content h1 {
+    color: #762E2E;
+    font-size: 80px;
+    margin-bottom: 20px;
+    font-family: 'Times new Roman', sans-serif;
+}
+  
+.btn-hero {
+    background-color: #762E2E;
+    font-family: 'Amiri', serif;
+    color: #F4ECE1;
+    padding: 15px 30px;
+    font-size: 16px;
+    text-decoration: none; /*ingen understregning*/
+    border-radius: 50px;
+    display: inline-block; 
+}
+  
+.btn-hero:hover {
+  color: #762E2E;
+  background-color: #C2982E;
+}
+
+/* ---------- responsiv til mindre skærme ---------- */
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 150px;
+  }
+  
+  .hero-content h1 {
+    font-size: 44px;
+    margin-bottom: 15px;
+  }
+
+  .btn-hero {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .hero-overlay {
+    flex-direction: column;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+}
+
+/*---------- trend sektion ----------*/
+.trends-section {
+    padding: 60px 0;
+    background-color: #F4ECE1;
+    position: relative;
+}
+
+.section-title {
+    font-size: 34px;
+    font-family: 'Amiri', serif;
+    color: #4A2C19;
+    text-align: center;
+}
+  
+.section-subtext {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: #4A2C19;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 1px;
+}
+
+/*container for alle 4 rektanger*/
+.trends-gallery {
+    display: flex;
+    gap: 30px;
+}
+  
+.trend-card-wrapper {
+    display: flex;
+    flex-direction: column; /*kolonne*/
+    align-items: center;
+    width: calc(25% - 22.5px); /*der vises 4 kort med lidt mellemrum */
+    overflow: visible; /*når noget går ud fra dens grænse så vises det uden at ændre layout*/
+    position: relative; 
+}
+
+.trend-card {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    border: 1px solid #762E2E; 
+    border-radius: 50px 50px 0 0; /*toppen runde kanter, bunden spidse*/
+    position: relative;
+    z-index: 2;
+}
+
+.trend-card a {
+  text-decoration: none;
+}
+
+.trend-card a img {
+  display: block;
+  border: none;
+}
+
+
+/*det grønne mærke på billedet*/
+.label-tag {
+    position: absolute;
+    top: 10%;
+    right: -25px;
+    background-color: #97BA94;
+    color: #4A2C19;
+    padding: 8px 20px;
+    border-radius: 15px;
+    font-size: 14px;
+    white-space: nowrap; /*tekst går ikke ned til en ny linje, forbliver på en linje*/
+    z-index: 9999; 
+}
+
+.trend-card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    border-radius: 50px 50px 0 0;
+}
+  
+.card-text {
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #4A2C19;
+    border-top: 1px solid #762E2E; 
+    text-align: center;
+}
+
+.trend-button {
+  display: inline-block;
+  background-color: #C2982E;
+  color: #F4ECE1;
+  font-family: 'Amiri', serif;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  transition: background-color 0.3s;
+  border: none;
+  margin-bottom: 15px;
+}
+  
+.trend-button:hover {
+    background-color: rgba(194, 152, 46, 0.60);
+    color: #4A2C19;
+}
+
+.trends-divider {
+    width: 100%;
+    max-width: 100%; 
+    margin: 0 auto;
+    margin-top: 50px;
+}
+  
+  /*side adskiller*/
+  .trends-divider img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ---------- responsiv til mindre skærme ---------- */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 24px;
+  }
+  
+  .section-subtext {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+  }
+  
+  .trends-section {
+    padding: 40px 15px;
+  }
+  
+  .trends-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*det bliver til 2 kolonner og ikke en lang række*/
+    gap: 20px;
+  }
+  
+  .trend-card-wrapper {
+    width: 100%;
+  }
+  
+  .trend-card img {
+    height: 140px;
+  }
+  
+  .card-text {
+    font-size: 10px;
+    padding: 10px;
+  }
+  
+  .trend-button {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+  
+  .label-tag {
+    font-size: 11px;
+    padding: 6px 10px;
+    right: -10px;
+  }
+  
+  .trends-divider {
+    margin-top: 30px;
+  }
+}
+  
+/*---------- om mig ----------*/
+.about-section {
+    background-color: #F4ECE1;
+    padding: 5px 0;
+    flex-direction: column; 
+}
+
+.about-image {
+    max-width: 380px; 
+    flex-shrink: 0; /*billedet bliver ikke skrumpet*/  
+    margin-bottom: 80px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block; /*mellemrum under billedet fjernes*/
+    border: 1px solid #762E2E;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-self: center; 
+}
+
+.about-button {
+    background-color: #762E2E;
+    font-family: 'Amiri', serif;
+    color: #F4ECE1;
+    padding: 15px 30px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: normal; 
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.about-button:hover {
+  color: #762E2E;
+  background-color: #C2982E;
+}
+
+.about-flex-wrapper {
+    display: flex;
+    align-items: center;  
+    gap: 40px;    
+}
+
+/* ---------- responsiv til mindre skærme ---------- */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 20px 20px;
+    text-align: center;
+  }
+
+  .about-flex-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .about-image {
+    width: 80%;    
+    margin-bottom: 0;
+  }
+
+  .about-image img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .about-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-button {
+    font-size: 14px;
+    padding: 12px 24px;
+    margin-top: 10px;
+  }
+}
+
+/*---------- leverandører ----------*/
+.suppliers {
+    background-color: #D5C8B5; /* ny baggrundsfarve */
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden; /*overløb er skjult*/
+}
+
+.suppliers .content-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*4 kolonner*/
+    gap: 50px;
+    margin-bottom: 30px;
+    justify-items: center; 
+    justify-content: center;
+}
+  
+.circle {
+    background-color: #762E2E;
+    color: #F4ECE1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    width: 190px;
+    height: 190px;
+}
+
+.circle:hover {
+    background-color: #C2982E;
+    color: #762E2E;
+}
+  
+/*se mere og se mindre*/
+.toggle-more, .toggle-less {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+  
+.arrow {
+    height: 40px;
+}
+  
+.toggle-text {
+    font-family: 'Amiri', serif;
+    color: #4A2C19;
+    font-size: 18px;
+}
+
+/*så der er mindre, skjultes se mindre pilen, og når den er aktiveret så skjules den anden*/
+.hidden {
+    display: none;
+}
+  
+.sticker-top-left {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 100px;
+}
+  
+.sticker-bottom-right {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 100px;
+}
+
+/* ---------- responsiv til mindre skærme ---------- */
+@media (max-width: 768px) {
+  .circle-grid {
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+  }
+
+  .circle {
+    width: 90px;
+    height: 90px;
+    font-size: 10px;
+    padding: 8px;
+  }
+
+  .toggle-text {
+    font-size: 16px;
+  }
+
+  .arrow {
+    height: 30px;
+  }
+
+  .sticker-top-left,
+  .sticker-bottom-right {
     width: 70px;
-    margin-right: 10px; 
+  }
 }
 
+/*---------- anledning ----------*/
+.opportunity {
+    padding: 60px 0;
+    background-color: #F4ECE1;
+    position: relative;
+}
+
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+}
+
+.card-set {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s ease;
+    min-width: 100%;
+}
+
+.card-set:not(.active) {
+    display: none;
+}
+
+.opportunity-card {
+    width: 300px;
+    max-width: none;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #762E2E;
+    border-radius: 50px 50px 0 0;
+}
+
+.opportunity-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.card-text2 {
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #4A2C19;
+    border-top: 1px solid #762E2E;
+    text-align: center;
+}
+
+/*pilene*/
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /*centreret på siden lodret*/
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-arrow:hover {
+  background-color: #C2982E;
+  color: #762E2E;
+}
+
+.left-arrow {
+    left: -50px;
+}
+
+.right-arrow {
+    right: -50px;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #762E2E;
+    border-radius: 50%;
+    margin: 0 5px;
+    opacity: 0.5;
+}
+
+.dot.active-dot {
+    opacity: 1;
+}
+
+/* ---------- responsiv til mindre skærme ---------- */
+@media (max-width: 768px) {
+  .opportunity {
+    padding: 20px 0;
+  }
+
+  .cards-container {
+    max-width: 100%;
+    padding: 0 2px; 
+  }
+
+  .opportunity-card {
+    width: 100px; 
+    max-width: none;
+  }
+
+  .opportunity-card img {
+    height: 130px; 
+  }
+
+  .card-text2 {
+    font-size: 13px;
+    padding: 12px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+  }
+}
+
+/*---------- sociale medier ----------*/
+.social-section {
+    background-color: #F4ECE1;
+    padding: 30px 0;
+}
+  
+/*billede collage*/
+.social-collage {
+    column-count: 5; /*5 kolonner*/
+    column-gap: 20px; /*mellemrum mellem kolonnerne*/
+    padding: 10px;
+}
+  
+.social-collage img {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: block;
+    break-inside: avoid; /*billeder bryder ikke ud af kolonner*/
+    object-fit: cover;
+}
+
+.extra-links {
+  margin-top: 1px;
+  font-size: 18px;
+  color: #4A2C19;
+  text-align: center;
+  margin-bottom: 10px;
+
+}
+
+.extra-links a {
+  color: #C2982E;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- responsiv til mindre skærme ---------- */
+@media (max-width: 768px) {
+  .social-collage {
+    column-count: 5; 
+    column-gap: 15px; 
+    padding: 5px;
+  }
+    
+  .social-collage img {
+    margin-bottom: 15px;
+    border-radius: 6px;
+  }
+
+  .extra-links a {
+    color: #C2982E;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+/* ---------- footer ---------- */
+.footer {
+    background-color: #CFA999;
+    padding: 40px 20px;
+    font-family: 'Poppins', serif;
+    color: #333;
+}
+  
+/*grid på footer*/
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*opdelt i 3 kolonner*/
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px; 
+}
+  
+/*højre og venstre side af footeren*/
+.footer-left,
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-right {
+    padding-left: 160px;
+}
+
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+  
+.footer-left h4 {
+    font-weight: bold;
+    font-size: 18px;
+}
+  
+.contact-info li {
+    list-style: none; /*der er ingen punkttegn*/
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+  
+.contact-info strong {
+    font-weight: bold;
+}
+  
+.contact-info span {
+    font-weight: normal;
+}
+
+.map-image {
+    width: 100%;
+    max-width: 300px;
+}
+  
+.opening-hours {
+    margin-top: 10px;
+    font-size: 14px;
+}
+ 
+.footer-logo {
+    width: 180px;
+    margin: 0 auto;
+}
+
+.under-logo-img {
+    width: 80px;
+    height: auto;
+}
+  
+.footer-right h4 {
+    font-weight: bold;
+    font-size: 18px;
+}
+  
+.info-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.info-links li {
+    margin-bottom: 8px;
+}
+  
+.info-links a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+}
+  
+.info-links a:hover {
+    text-decoration: underline; /*der kommer understreg ved hover*/
+}
+
+/* ---------- responsiv til mindre skærme ---------- */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+  
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    align-items: center !important; /* centrer indholdet */
+    text-align: center;
+    padding-left: 0 !important; /* fjern venstre padding fra footer-right */
+  }
+  
+  .footer-right {
+    padding-left: 0;
+  }
+  
+  .footer-logo {
+    margin: 0 auto 20px auto;
+    width: 140px; /* mindre logo på mobil */
+  }
+  
+  .under-logo-img {
+    width: 100px; /* mindre billede under logo */
+  }
+  
+  .contact-info li,
+  .info-links li {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+  
+  .info-links a {
+    font-size: 13px;
+  }
+  
+  .map-image {
+    max-width: 50%;
+    height: auto;
+  }
+}
+  
+    
+/*DEN NYE SIDE - byg selv kurv*/
+/*---------- forside ----------*/
+.forside-section {
+    background-color: #F4ECE1;
+    padding: 10px 0;
+}
+  
+.forside-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*afstand mellem højre og venstre*/
+    gap: 60px;
+    min-height: 100vh;
+}
+  
+.forside-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    flex: 1; /*venstre side fylder lige meget plads som højre side*/
+}
+  
+.forside-left h1 {
+    font-family: 'Amiri', serif;
+    font-size: 40px;
+    color: #4A2C19;
+    margin: 0;
+}
+  
+.steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+  
+.step {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+  
+.step-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #762E2E;
+    color: white;
+    font-size: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.step p {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #4A2C19;
+}
+  
+.forside-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*4 kolonner*/
+    grid-template-rows: repeat(2, 200px); /*2 rækker som er 200px høje*/
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+  
+.photo-grid img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 1px solid #762E2E;
+}
+  
+/*specifikke placeringer for de 4 billeder*/
+.photo-1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+.photo-2 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+.photo-3 {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+}
+.photo-4 {
+    grid-column: 3 / 5;
+    grid-row: 2 / 3;
+}
+
+/* ---------- responsiv til mindre skærme ---------- */
+ @media (max-width: 768px) {
+  .forside-section {
+    margin-top: 200px;
+}
+
+  .forside-content {
+    gap: 20px;
+    min-height: auto;
+  }
+  
+  .forside-left {
+    width: 100%;
+    margin-top: 80px;
+  }
+  
+  .forside-left h1 {
+    font-size: 16px;
+    color: #4A2C19;
+    display: block;
+  }
+  
+  .steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 1px;
+  }
+  
+  .step-circle {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+  
+  .step p {
+    font-size: 12px;
+    margin: 0;
+  }
+  
+  .forside-right {
+    width: 100%;
+    max-width: none; 
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-top: 90px;
+  }
+  
+  .photo-grid {
+    grid-template-columns: 1fr; /*en kolonne*/
+    grid-template-rows: auto;
+    gap: 10px;
+    width: 100%;
+    max-width: none; 
+    height: auto;
+    margin-top: 40px;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  
+  .photo-1, 
+  .photo-2,
+  .photo-3,
+  .photo-4 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  
+  .photo-grid img {
+    border-radius: 12px;
+    height: 80px;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+  
+/* ---------- første trin ---------- */
+.step-one-section {
+    background-color: #D5C8B5;
+    padding: 50px 0;
+}
+  
+.catchy-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+  
+.catchy-header h2 {
+    font-size: 58px;
+    color: #4A2C19;
+    font-family: 'Amiri', serif;
+    margin: 0;
+    letter-spacing: 15px; /*bogstav afstand*/
+}
+  
+.sticker {
+    width: 80px;
+    height: auto;
+}
+  
+.step-large {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    justify-content: left; /*trin indhold som cirkel og trin beskrivelse starter fra venstre side*/
+}
+  
+.step-text-large {
+    font-size: 32px;
+    font-family: 'Amiri', serif;
+    color: #4A2C19;
+    margin: 0;
+    font-weight: normal;
+}
+
+
+
+  
+.step-card:hover {
+    transform: scale(1.03);
+}
+
+/* ---------- andet trin ---------- */
+.two-section {
+    background-color: #F4ECE1;
+    padding: 80px 0;
+}
+  
+.trin-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+  
+.trin-heading-texts {
+    display: flex;
+    flex-direction: column;
+}
+  
+.subcategory {
+    margin-bottom: 60px;
+}
+  
+.subcategory-title {
+    font-size: 22px;
+    color: #4A2C19;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+  
+.step-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*4 kolonner*/
+    gap: 20px;
+}
+  
+.step-card {
+    background-color: white;
+    border: 1px solid #762E2E;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    text-align: center;
+}
+  
+.step-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block; 
+}
+  
+.step-card p {
+    font-size: 16px;
+    color: #4A2C19;
+    font-family: 'Poppins', sans-serif;
+    padding: 15px 10px; 
+    border-top: 1px solid #762E2E;
+}
+  
+.step-card.selected {
+    border: 3px solid #C2982E;
+}
+  
+.see-more {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Poppins', sans-serif;
+    color: #4A2C19;
+    font-size: 16px;
+    margin-top: 15px;
+}
+  
+.see-more:hover {
+    transform: translateX(3px);
+}
+  
+.arrow {
+    font-size: 18px;
+    margin-top: 10px;
+}
+  
+/* ---------- flere kategorier ---------- */
+.kategori-sektion {
+    background-color: #D5C8B5;
+    padding: 80px 0;
+}
+  
+/* ---------- mange flere kategorier ---------- */
+.non-food-sektion {
+    background-color: #F4ECE1;
+    padding: 80px 0;
+}
+
+.trend-divider {
+    width: 100%;
+    max-width: 100%; 
+    margin: 0 auto; 
+    margin-top: 50px;
+}
+  
+.trend-divider img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ---------- responsiv til mindre skærme ---------- */
+@media (max-width: 768px) {
+  .catchy-header {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .catchy-header h2 {
+    font-size: 28px;
+    letter-spacing: 5px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .sticker {
+    width: 50px;
+    height: auto;
+  }
+  
+  .step-large {
+    margin-bottom: 30px;
+  }
+  
+  .step-text-large {
+    font-size: 20px;
+  }
+
+  .subcategory-title{
+    font-size: 15px;
+  }
+
+  .step-cards {
+    display: flex; 
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: nowrap; /*forbliver på en række*/
+    padding: 0 10px;
+  }
+  
+  .step-card {
+    flex: 0 0 25%; /*4 på en række med en smule luft*/
+    max-width: 25%;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .step-card img {
+    height: 100px; 
+  }
+  
+  .step-card p {
+    font-size: 10px;
+    padding: 5px 5px;
+    white-space: nowrap; /*skifter ikke ned til en ny linje*/
+    overflow: hidden;  
+    text-overflow: ellipsis;   /*hvis teksten er for lang kommer der til at stå "..."*/
+  }
+
+  .see-more {
+    justify-content: center;
+    font-size: 10px;
+    margin-top: 8px;
+  }
+  
+  .arrow {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .trend-divider {
+    margin-top: 10px;
+  }
+}
+  
+/* ---------- personliggør ---------- */
+.personaliser-section {
+    background-color: #D5C8B5;
+    padding: 80px 0;
+}
+  
+.trin-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #762E2E;
+    margin: 0;
+}
+  
+.trin-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 40px;
+}
+  
+.personaliser-grid {
+    display: flex;
+    flex-wrap: wrap; /*går ned på en ny linje når der ikke er plads*/
+    gap: 40px;
+}
+  
+.personaliser-left,
+.personaliser-right {
+    flex: 1 1 45%;  /*flex-grow: 1; flex-shrink: 1; flex-basis: 45% */
+}
+  
+.personaliser-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #4A2C19;
+    margin-bottom: 15px;
+}
+  
+/*gavebånd cirkler*/
+.color-options {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+  
+.color-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #762E2E;
+}
+
+.color-circle.selected {
+    border: 3px solid #762E2E;
+}
+  
+.color-circle:hover {
+    border-color: #762E2E;
+}
+  
+/*afkrydsningsliste*/
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+  
+.checkbox-group label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #4A2C19;
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #CFA999;  
+}
+  
+.checkbox-group input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+}
+  
+/*boks til skrive hilsen*/
+.note-hint {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #4A2C19;
+    margin-bottom: 10px;
+}
+  
+.note-input {
+    width: 100%;
+    height: 350px;
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    border: 2px solid #762E2E;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+  
+.note-input::placeholder {
+    color: #d6d6d6;
+}
+
+/* ---------- responsiv til mindre skærme ---------- */
+@media (max-width: 768px) {
+  .personaliser-section {
+    padding: 40px 20px;
+  }
+  
+  .trin-title {
+    font-size: 20px;
+  }
+  
+  .trin-description {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  
+  .personaliser-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .personaliser-left,
+  .personaliser-right {
+    flex: 1 1 100%; /*vokser og skrumper, basis 100%*/
+    max-width: 100%;
+  }
+  
+  .personaliser-subtitle {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .color-options {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .color-circle {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .checkbox-group {
+    gap: 8px;
+  }
+  
+  .checkbox-group label {
+    font-size: 13px;
+    padding-bottom: 6px;
+  }
+  
+  .checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .note-hint {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  
+  .note-input {
+    height: 200px;
+    font-size: 13px;
+    padding: 12px;
+  }
+}
+  
+/*---------- dobbelttjek side ----------*/
+.checkout-section {
+  background-color: #F4ECE1;
+  padding: 80px 0;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #762E2E;
+    margin: 30px 0;
+}
+
+.checkout-slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    width: 100%; 
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.pil {
+    width: 40px;
+    height: auto;
+}
+
+.checkout-items-wrapper {
+    overflow: hidden;
+    width: 80%;
+}
+  
+.checkout-items {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s;
+}
+  
+/*indhold man har tilføjet i kurven nede i nederste side*/
+.checkout-item {
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    position: relative;
+    width: 200px;
+    flex-shrink: 0; /*skrumper ikke selvom der er lidt plads*/
+}
+  
+.checkout-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/*kryds til fjerne*/
+.remove-item {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #762E2E;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+  
+/*plus minus containeren*/
+.qty-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+  
+.qty-control button {
+    background-color: #762E2E;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+  
+.qty-control span {
+    font-size: 16px;
+    font-weight: bold;
+}
+  
+/*pris*/
+.price-tag {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.checkout-summary {
+    display: flex;
+    flex-direction: column;   /*knap og tekst under hinanden og ikke på en lige linje*/
+    align-items: center;  
+    gap: 10px;          
+    color: #4A2C19;
+    margin-top: 20px;
+}  
+
+.checkout-summary p {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* ---------- responsiv til mindre skærme ---------- */
+@media (max-width: 768px) {
+  .checkout-section {
+    padding: 10px 20px;
+  }
+  
+  .checkout-slider-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /*pilene helt ud til kanterne*/
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  
+  .pil {
+    width: 30px;
+    flex-shrink: 0;
+  }
+  
+  .checkout-items {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .checkout-item {
+    width: 45%; 
+  }
+  
+  .checkout-item img {
+    height: 100px;
+    border-radius: 8px;
+  }
+  
+  .remove-item {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    top: 4px;
+    right: 4px;
+  }
+  
+  .qty-control {
+    gap: 8px;
+    margin-top: 8px;
+  }
+  
+  .qty-control button {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+  }
+  
+  .qty-control span {
+    font-size: 14px;
+  }
+  
+  .price-tag {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  
+  .checkout-summary {
+    margin-top: 30px;
+    gap: 8px;
+  }
+  
+  .checkout-summary p {
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .add-to-cart-btn {
+    font-size: 16px;
+    padding: 8px 25px;
+    border-radius: 25px;
+  }
+}
+  
+/* ---------- popup til tilmelding af nyhedsbrev ---------- */
+.popup {
+  display: none; /*bliver skjult i starten*/
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /*baggrund bliver mørkere med overlay når popup bliver synlig*/
+  justify-content: center; 
+  align-items: center;
+  z-index: 1000; /*sørger for at den er ovenpå alt*/
+  font-size: 14px;
+}
+
+/*indholdet*/
+.popup-content {
+  background-color: #D5C8B5;
+  padding: 20px; 
+  border-radius: 10px;
+  text-align: center;
+  width: 400px;
+  max-width: 90%; 
+  border: 1px solid #762E2E;
+  color: #762E2E;
+}
+
+/*luk ikonet*/
+.close {
+  color: #762E2E;
+  float: right; /*ligger i højre hjørne*/
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: #000000;
+}
+
+/*input felt*/
+#newsletterForm input[type="email"] {
+  width: 100%; 
+  padding: 15px; /*afstand indeni*/
+  margin: 10px 0; 
+  border: 1px solid #762E2E; 
+  border-radius: 5px; 
+  font-size: 16px; 
+}
+
+/*cta knap (tilmeld)*/
+#newsletterForm button {
+  padding: 15px; 
+  background-color: #C2982E; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 18px; 
+  width: 100%; 
+  font-family: 'Amiri', serif;
+}
+
+#newsletterForm button:hover {
+  background-color: #CFA999;
+  color: #762E2E;
+}
+
+/*DEN NYE SIDE - produktside*/
 .container {
   display: flex;
   max-width: 1500px;
-  margin-top: 0rem;
-  margin-left: 2rem;
+  margin-top: 80px;
   background: #F4ECE1;
-  padding: 5rem;
   border-radius: 8px;
+  padding: 80px;
 }
 
 .left {
   flex: 1;
+}
+
+.left h1 {
+  font-size: 34px;
+  font-family: 'Amiri', serif;
+  color: #4A2C19;
+}
+
+.left p  {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: #4A2C19;
+}
+
+.left p.feature {
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  color: #4A2C19;
 }
 
 .right {
@@ -53,6 +1952,8 @@ body {
 .right img {
   width: 80%;
   max-width: 1000px;
+  height: 70%;
+  object-fit: cover;
   border-radius: 6px;
   border: 1px solid #ccc;
 }
@@ -64,7 +1965,7 @@ body {
   border: none;
   border-radius: 40px;
   cursor: pointer;
-  font-weight: regular;
+  font-weight: normal;
   font-size: 0.9rem;           /* smaller font size */
   width: auto;                 /* don't stretch full width */
   display: inline-block;       /* only as wide as content */
@@ -78,14 +1979,19 @@ opacity: 50%;
 
 }
 
-
+.icon {
+  width: 20px;      
+  height: 20px;
+  vertical-align: middle; /*ligger pænt på samme linje med tekst*/
+  margin-right: 5px;  
+}
 
 .question {
     cursor: pointer;
 }
 
 .faq-container {
-  border: 2px solid #c57b57; /* vælg en farve du kan lide */
+  border: 1px solid #762E2E; /* vælg en farve du kan lide */
   border-radius: 8px;
   padding: 1rem;
   margin-top: 1rem;
@@ -107,7 +2013,6 @@ opacity: 50%;
 
 .faq-container.active .answer {
   display: block;
-
 }
 
 .faq-wrapper {
@@ -117,107 +2022,50 @@ opacity: 50%;
   margin-top: 2rem;
 }
 
-/*FOOTER STYLE*/
-
- .footer {
-    background-color: #CFA999;
-    padding: 40px 20px;
-    font-family: 'Poppins', serif;
-    color: #333;
-  }
-
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 40px; 
-    align-items: start;
-  }
-
-
-.footer-right {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: flex-start; /* Venstre justeret */
-}
-
-.footer-right {
-    padding-left: 160px;
-  }
-
-
-.footer-center {
-    display: flex;
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 200px;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
   }
 
-  .footer-left h4 {
-    font-weight: bold;
-    font-size: 18px;
-  }
-
-  .contact-info li {
-    list-style: none;
-    margin-bottom: 6px;
-    font-size: 14px;
-  }
-
-  .contact-info strong {
-    font-weight: bold;
-  }
-
-  .contact-info span {
-    font-weight: normal;
-  }
-
-  .map-image {
+  .left, .right {
+    flex: unset;
     width: 100%;
-    max-width: 300px;
+    text-align: center;
   }
 
-  .opening-hours {
-    margin-top: 10px;
+  .left h1 {
+    font-size: 24px;
+  }
+
+  .left p,
+  .left p.feature {
     font-size: 14px;
   }
 
-
-  .footer-logo {
-    width: 180px;
-    margin: 0 auto;
-  }
-
-  .under-logo-img {
-    width: 80px;
+  .right img {
+    width: 100%;
     height: auto;
-
+    max-width: 100%;
+    margin: 20px 0;
   }
 
-  .footer-right h4 {
-    font-weight: bold;
-    font-size: 18px;
+  .buttom {
+    font-size: 0.8rem;
+    padding: 10px 20px;
   }
 
-  .info-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .info-links li {
-    margin-bottom: 8px;
-  }
-
-  .info-links a {
-    text-decoration: none;
-    color: #333;
+  .faq-container {
+    max-width: 100%;
     font-size: 14px;
   }
 
-  .info-links a:hover {
-    text-decoration: underline;
+  .faq-container .answer {
+    font-size: 14px;
   }
 
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+}

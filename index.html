@@ -12,31 +12,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">   
 
     <link rel="stylesheet" href="style.css">
-
     <script src="script.js" defer></script>
+    <script src="navigationsbar.js" defer></script>
 </head>
-<!--------------------------------Ilyas nav start---------------------------------->
-<body id="ilyasbody">
 
-  <nav id="ilyasnavbar">
-    <a href="index.html"><img id="ilyaslogo" src="billeder/ilyasbilleder/logo.webp" alt="Liwira logo"></a>
+<body>
+  <!--navigationsbar-->
+  <header id="navbar">
+    <a href="index.html"><img id="logo" src="billeder/logo.jpg" alt="Liwira logo"></a>
 
-    <ul id="ilyasnavlinks">
-      <li><a href="index.html" class="ilyasactive">Hjem</a></li>
+    <ul id="navlinks">
+      <li><a href="index.html" class="navactive">Hjem</a></li>
 
-      <li class="ilyasdropdown">
+      <li class="dropdown">
         <a href="#">Kategorier</a>
-        <ul class="ilyassubmenu">
-          <li><img class="ilyasicon" id="bryllupImg" src="billeder/ilyasbilleder/bryllup1.webp"><span>Bryllup</span></li>
-          <li><img class="ilyasicon" id="gaverImg" src="billeder/ilyasbilleder/gaver1.webp"><span>Gaver</span></li>
-          <li><img class="ilyasicon" id="maerkedageImg" src="billeder/ilyasbilleder/maerkedage1.webp"><span>Mærkedage</span></li>
-          <li><img class="ilyasicon" id="begravelseImg" src="billeder/ilyasbilleder/begravelse1.webp"><span>Begravelse</span></li>
+        <ul class="submenu">
+          <li><img class="navicon" id="bryllupImg" src="billeder/navbar/bryllup.jpg" alt="to ringe"><span>Bryllup</span></li>
+          <li><img class="navicon" id="gaverImg" src="billeder/navbar/gave.jpg" alt="en gave"><span>Gaver</span></li>
+          <li><img class="navicon" id="maerkedageImg" src="billeder/navbar/markedage.jpg" alt="balloner"><span>Mærkedage</span></li>
+          <li><img class="navicon" id="begravelseImg" src="billeder/navbar/begravelse.jpg" alt="kors"><span>Begravelse</span></li>
         </ul>
       </li>
 
-      <li class="ilyasdropdown">
+      <li class="dropdown">
         <a href="#">Om os</a>
-        <ul class="ilyassubmenu">
+        <ul class="submenu">
           <li>Liwira</li>
           <li>Lisbeth</li>
         </ul>
@@ -45,76 +45,72 @@
       <li><a href="#">Kontakt</a></li>
     </ul>
 
-    <div id="ilyasicons">
-      <div id="ilyassogContainer">
-        <img id="ilyassog" src="billeder/ilyasbilleder/search.webp" alt="Søg">
-        <input type="text" id="ilyassogfelt" placeholder="Søg her...">
+    <div id="iconss">
+      <div id="searchcontainer">
+        <img id="search" src="billeder/Ikoner/search-alt.png" alt="Søg">
+        <input type="text" id="searchfelt" placeholder="Søg her...">
       </div>
-      <img id="ilyaskurv" src="billeder/ilyasbilleder/cart.webp" alt="Kurv">
-      <a href="bygkurv.html"><button id="ilyasknap" class="ilyasactive">Byg din kurv</button></a>
+      <img id="basket" src="billeder/Ikoner/basket.png" alt="Kurv">
+      <a href="bygkurv.html" id="buttonnav" class="navactive">Byg din kurv</a>
+      
     </div>
-  </nav>
-
-
-<script defer src="ilyasjavascript.js"></script>
-</body>
-<!---------------------Ilyas nav slut------------------------>
-
+  </header>
+  
   <main>
-        <!----------forside---------->
+        <!--forside-->
         <section class="hero">
           <img src="billeder/forside.jpg" alt="Forside billede" class="hero-img">
           <div class="hero-overlay">
             <div class="hero-content">
               <h1>Find den <br>perfekte gave!</h1>
-              <a href="#" class="btn-hero">TILMELD DIG NYHEDSBREV</a>
+              <a href="#" class="btn-hero">Tilmeld dig nyhedsbrev</a>
             </div>
           </div>
         </section>
 
-            <!----------pop-up---------->
+            <!--pop-up-->
             <div id="newsletterPopup" class="popup">
               <div class="popup-content">
                 <span class="close" id="closePopup">&times;</span> 
                 <h2>Tilmeld dig vores nyhedsbrev</h2>
                 <form id="newsletterForm">
                   <input type="email" id="email" placeholder="Indtast din e-mail" required>
-                  <button type="submit">TILMELD</button>
+                  <button type="submit">Tilmeld</button>
                 </form>
                   <p id="responseMessage"></p>
               </div>
             </div>
 
-        <!----------trends lige nu---------->
+        <!--trends lige nu-->
         <section class="trends-section">
             <div class="content-grid"> <!--grid-->
               <div class="grid-3-11">
                 
                 <h2 class="section-title">TRENDS LIGE NU</h2> <!--overskrift på siden-->
-                <p class="section-subtext">Lorem ipsum dolor sit amet...</p> <!--undertekst for siden-->
+                <p class="section-subtext">Kundernes favoritter – populære valg, du ikke vil gå glip af.</p> <!--undertekst for siden-->
 
                 <div class="trends-gallery"> <!--de 4 rektangler med billeder i-->
                   <div class="trend-card-wrapper">
                     <div class="trend-card">
-                      <img src="billeder/trends/vandflaske.jpg" alt="en lyserød genanvendelig vandflaske">
+                      <a href="shoppingchart.html"><img src="billeder/produktside/billede1.png" alt="anden billede"></a>
                       <div class="label-tag">Mest solgte</div> <!--grøn tag på billedet-->
                       <div class="card-text">
-                        <p>Orange chokolade i lys...</p> <!--teksten i kassen under billedet-->
-                        <p>180kr.</p>
+                        <p>Termokande.</p> <!--teksten i kassen under billedet-->
+                        <p>120kr.</p>
                       </div>
                     </div>
-                      <a href="#" class="trend-button">Tilføj til kurv</a> <!--knappen under rektanglen-->
+                    <button class="trend-button">Tilføj til kurv</button><!--knappen under rektanglen-->
                   </div>
                   
                   <div class="trend-card-wrapper">
                     <div class="trend-card">
                       <img src="billeder/trends/chokolade.jpg" alt="anden billede">
                       <div class="card-text">
-                        <p>Nicolas Feuillatte cha...</p>
-                        <p>200kr.</p>
+                        <p>Chokolade med nødder</p>
+                        <p>90kr. </p>
                       </div>
                     </div>
-                      <a href="#" class="trend-button">Tilføj til kurv</a>
+                      <button class="trend-button">Tilføj til kurv</button>
                   </div>
                   
                   <div class="trend-card-wrapper">
@@ -122,30 +118,30 @@
                       <img src="billeder/trends/iskaffe.jpg" alt="tredje billede">
                       <div class="label-tag">Populært</div> 
                       <div class="card-text">
-                        <p>The Art of Chocolate C...</p>
-                        <p>340kr.</p>
+                        <p>Iskaffe siryp - karamel</p>
+                        <p>56kr.</p>
                       </div>
                     </div>
-                      <a href="#" class="trend-button">Tilføj til kurv</a>
+                    <button class="trend-button">Tilføj til kurv</button>
                   </div>
                   
                   <div class="trend-card-wrapper">
                     <div class="trend-card">
                       <img src="billeder/trends/duft.jpg" alt="fjerde billede">
                       <div class="card-text">
-                        <p>ASK Jærnurt</p>
-                        <p>210kr.</p>
+                        <p>Meraki duftpinde</p>
+                        <p>100kr.</p>
                       </div>
                     </div>
-                      <a href="#" class="trend-button">Tilføj til kurv</a>
-                    </div>
+                    <button class="trend-button">Tilføj til kurv</button>
+                  </div>
                   </div>
                     <img src="billeder/grafik/grafik.png" alt="Adskillelse" class="trends-divider"> <!--adskiller siderne fra hinanden-->
                 </div>
             </div>
         </section>
 
-        <!----------om mig---------->
+        <!--om mig-->
         <section class="about-section">
             <div class="content-grid">
               <div class="grid-3-11">
@@ -159,12 +155,12 @@
                     <div class="section-title">
                       <h3>HVEM ER JEG</h3> <!--overskrift på siden-->
                     </div>
-                      <p class="section-subtext"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  
-                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum 
-                        dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</p> <!--tekst om Lisbeth-->
+                      <p class="section-subtext"> Mit navn er Lisbeth og jeg er personen bag Liwira. 
+                        Jeg er en passioneret og kreativ sjæl med sans for det æstetiske. Jeg elsker at fordybde mig i detaljer 
+                        og jeg går meget op i at min butik og hjemmeside bliver vist fra sin bedste side. Mit hjerte banker for det bæredygtige og at 
+                        støtte op om det lokale erhvervsliv. Jeg er uddannet sygeplejerske og har tidligere arbejdet som personaleleder og projektleder i tekniske projekter. 
+                        Jeg er også uddannet coach, så jeg ser mig selv som mere som en rådgiver end en sælger. 
+                       </p> <!--tekst om Lisbeth-->
                       <a href="#" class="about-button">Læs mere</a>
                   </div>
                 </div>
@@ -172,13 +168,13 @@
             </div>
         </section>
 
-        <!----------leverandører---------->
+        <!--leverandører-->
         <section class="suppliers">
           <div class="content-grid">
             <div class="grid-3-11">
               
               <h4 class="section-title">LEVERANDØRER</h4>
-              <p class="section-subtext">Udforsk vores forskellige muligheder</p>
+              <p class="section-subtext">Vi samarbejder med nøje udvalgte kvalitetsleverandører for at sikre dig det bedste udvalg.</p>
                 
               <!--række med cirkler-->
               <div class="circle-grid">
@@ -223,13 +219,13 @@
           </div>
         </section>
 
-        <!----------anledning---------->
+        <!--anledning-->
         <section class="opportunity">
           <div class="content-grid">
             <div class="grid-3-11">
               
-              <h5 class="section-title">ANLEDNING</h5>
-              <p class="section-subtext">Udforsk vores forskellige muligheder</p>
+              <h5 class="section-title">DEN RIGTIGE ANLEDNING</h5>
+              <p class="section-subtext">Gaver med omtanke – til alle livets små og store øjeblikke.</p>
 
               <div class="slider-wrapper"> <!--carousel med pil navigation-->
                 <img src="billeder/Ikoner/chevron-left.png" class="nav-arrow left-arrow" onclick="prevSlide()" alt="Forrige">
@@ -283,13 +279,18 @@
           </div>
         </section>
 
-        <!----------sociale medier---------->
+        <!--sociale medier-->
         <section class="social-section">
           <div class="content-grid">
             <div class="grid-3-11">
         
               <h6 class="section-title">FIND OS PÅ SOCIALE MEDIER</h6>
-              <p class="section-subtext">Se de nyeste billeder fra vores Instagram</p>
+              <p class="section-subtext">Se de nyeste billeder fra vores Instagram, og følg os også på:</p>
+
+              <p class="extra-links">
+                <a href="https://www.instagram.com/liwira_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">Instagram</a> og 
+                <a href="https://www.facebook.com/Liwira.gavebutik" target="_blank" rel="noopener">Facebook</a>.
+              </p>
         
               <!--collage med billeder-->
               <div class="social-collage">
@@ -315,7 +316,7 @@
         </section>
   </main>
 
-  <!----------footer---------->
+  <!--footer-->
   <footer class="footer">
       <div class="footer-grid">
 
