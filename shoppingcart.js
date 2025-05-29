@@ -1,26 +1,26 @@
 //Pernille Java script start 
 
 setTimeout(function(){
-    const listOfQuestions = document.querySelectorAll('.faq-container');
+    const productInfobox = document.querySelectorAll('.product-info-container');
 
-    const faqHandler = {
-        toggleAnswer(questionObject) {
-            const answer = questionObject.querySelector('.answer');
-            const erSynlig = answer.style.display === 'block';
+    const productInfoHandler = {
+        toggleDescription(Infobox) {
+            const description = Infobox.querySelector('.product-description');
+            const erSynlig = description.style.display === 'block';
 
             if (erSynlig) {
-                answer.style.display = 'none';
-                questionObject.classList.remove('active');
+                description.style.display = 'none';
+                Infobox.classList.remove('active');
             }
             else{
-                answer.style.display = 'block';
-                questionObject.classList.add('active');
+                description.style.display = 'block';
+                Infobox.classList.add('active');
             }
         }
     };
 
-    listOfQuestions.forEach(questionObject => {
-        questionObject.addEventListener('click', () => faqHandler.toggleAnswer(questionObject));
+    productInfobox.forEach(Infobox => {
+        Infobox.addEventListener('click', () => productInfoHandler.toggleDescription(Infobox));
     });
 }, 1000);
 

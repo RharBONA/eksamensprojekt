@@ -1986,11 +1986,11 @@ opacity: 50%;
   margin-right: 5px;  
 }
 
-.question {
+.theme {
     cursor: pointer;
 }
 
-.faq-container {
+.product-info-container {
   border: 1px solid #762E2E; /* vælg en farve du kan lide */
   border-radius: 8px;
   padding: 1rem;
@@ -2001,17 +2001,17 @@ opacity: 50%;
   transition: background-color 0.3s ease;
 }
 
-.faq-container:hover {
+.product-info-container:hover {
   background-color: #CFA999;
 }
 
-.faq-container .answer {
+.product-info-container .product-description {
   display: none;
   margin-top: 0.5rem;
   font-size: 0.9rem;
 }
 
-.faq-container.active .answer {
+.product-info-container.active .product-description {
   display: block;
 }
 
@@ -2055,12 +2055,12 @@ opacity: 50%;
     padding: 10px 20px;
   }
 
-  .faq-container {
+  .product-info-container {
     max-width: 100%;
     font-size: 14px;
   }
 
-  .faq-container .answer {
+  .product-info-container .product-description {
     font-size: 14px;
   }
 
